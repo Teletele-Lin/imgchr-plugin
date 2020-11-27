@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	"name": "路过图床上传插件",
+	"version": "1.0",
+	"description": "这是路过图床插件，点击即可上传图片",
+	"author": "teletele",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://www.baidu.com/*"],
+			"js": ["content-script.js"]
+		}
+	],
+	"background":
+	{
+		"page": "background.html"
+	},
+	"homepage_url": "https://github.com/Teletele-Lin/imgchr-plugin",
+	"web_accessible_resources": 
+	[
+		"inject.js"
+	]
+}
